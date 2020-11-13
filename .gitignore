@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+.vs
+# Ignore Visual Studio 2019 CMake Settings
+CMakeSettings.json
+

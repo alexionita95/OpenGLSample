@@ -25,6 +25,10 @@ namespace  nano
 
             do {
                 glClear(GL_COLOR_BUFFER_BIT);
+                if (renderer != nullptr)
+                {
+                    renderer->Render();
+                }
                 InputProcessor::get().update();
                 glfwSwapBuffers(window);
                 
@@ -34,11 +38,12 @@ namespace  nano
 
             glfwTerminate();
         }
-        void Framework::init()
+        void Framework::init(std::shared_ptr<IRenderer> renderer_)
         {
             if (globWindow == nullptr) {
                 WindowProperties properties;
                 globWindow = std::make_shared<Window>(properties);
+                renderer = renderer_;
             }
             
         }

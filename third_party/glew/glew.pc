@@ -1,6 +1,6 @@
-prefix=D:/Sandbox/SampleProject/install
+prefix=D:/Work/C++/OpenGLEngine/install
 exec_prefix=${prefix}
-libdir=D:/Sandbox/SampleProject/install/lib
+libdir=D:/Work/C++/OpenGLEngine/install/lib
 includedir=${prefix}/include
 
 Name: glew

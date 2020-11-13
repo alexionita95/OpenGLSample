@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include "Window.h"
+#include "IRenderer.h"
 namespace  nano
 {
     namespace framework
@@ -13,9 +14,10 @@ namespace  nano
             {
                 return globWindow;
             }
-            void init();
+            void init(std::shared_ptr<IRenderer> renderer_);
         private:
             std::shared_ptr<Window> globWindow;
+            std::shared_ptr<IRenderer> renderer;
 
         };
 
